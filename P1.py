@@ -1,1 +1,26 @@
-print("Hello, GitHub!")
+# If a class is a blueprint for creating objects, then a metaclass is a blueprint for creating
+# classes
+# Classes are instances of Metaclass
+# Metaclasses are instances of 'type'
+# Why use it?
+#1. Class registration
+#2. Code validation
+# 3. API frameworks: SQLAlchemy, Django
+T
+
+import datetime
+
+class SimpleMeta(type):
+    def __new__(cls, name, bases, attrs):
+        print(f"Creating classes: {name}")
+        print(f"Base classes: {bases}")
+        print(f"Attributes: {list(attrs.keys())}")
+
+        attrs['created_at'] = datetime.datetime.now()
+        attrs['created_by'] = 'SimpleMeta'
+        return super().__new__(cls, name, bases, attrs)
+
+class Myclass(metaClass = SimpleMeta):
+    x =10
+
+
