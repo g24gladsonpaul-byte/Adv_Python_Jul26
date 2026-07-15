@@ -20,3 +20,6 @@ class CountDown:
 print("countdown")
 countdown = CountDown(5)
 print(next(countdown))  
+print(next(countdown))
+print(next(countdown))
+print(next(countdown))
