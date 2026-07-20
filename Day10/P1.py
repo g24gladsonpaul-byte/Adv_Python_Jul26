@@ -42,3 +42,23 @@ if __name__ == "__main__":
     print(f"calculating the {nth}th prime number...")
     prime_result = calculate_prime(nth)
     print(f"The {nth}th prime number is: {prime_result}")
+
+    # When to use Threads
+    # 1. Web scraping multiple websites
+    # 2. Downloading files from the interner
+    # 3. Read/write of mulyiple files 
+    # 4. Handling multiple network connections
+
+    # Bad use case 
+    # 1. Heavy mathematical computation
+    # 2. CPU intensive data processing
+
+    # Concurrency vs Parellelism
+    # Multiple tasks make progress over time
+    # Tasks are interleaved
+    # Single CPU core is shared
+    # Looks like they're running simultaneously
+
+    # Parellelism: Multiple tasks execure simultaneously
+    # Multiple CPU cores
+    # Not possible in Python with threads (due to GIL)
